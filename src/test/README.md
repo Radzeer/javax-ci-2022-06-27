@@ -9,5 +9,5 @@ mvn wrapper:wrapper
 
 mvnw package
 java -jar target/....
-
+mvnw versions:display-dependency-updates
 ```
