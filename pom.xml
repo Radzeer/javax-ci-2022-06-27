@@ -167,6 +167,7 @@
                     </annotationProcessorPaths>
                 </configuration>
             </plugin>
+
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
@@ -187,6 +188,7 @@
 					</execution>
 				</executions>
 			</plugin>
+
 					<!-- Integrációs teszteket futtatja: integration-test -->
 			<plugin>
 			<groupId>org.apache.maven.plugins</groupId>
@@ -207,6 +209,8 @@
 				</execution>
 			</executions>
 		</plugin>
+
+
         </plugins>
     </build>
 

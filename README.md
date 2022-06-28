@@ -1,13 +1,37 @@
-#JAVA CI/CD
+# JAVA CD tanfolyam
 
 ```shell
-set JAVA_HOME=c:\Program Files\Java\jdk-17.0.3.1
+git clone https://github.com/Training360/javax-ci-2022-06-27
+set JAVA_HOME=c:\Program Files\Java\jdk-17
 set PATH=%JAVA_HOME%\bin;%PATH%
-
+set PATH=C:\java\apache-maven-3.6.3\bin;%PATH%
 mvn package
 mvn wrapper:wrapper
-
 mvnw package
-java -jar target/....
+java -jar target\employees-1.0-SNAPSHOT.jar
+```
+
+```shell
+mvnw help:effective-pom
+mvnw test
+mvnw dependency:tree
+mvnw dependency:analyze
 mvnw versions:display-dependency-updates
+```
+
+```shell
+docker build -t employees .
+docker run -p 8083:8080 -d --name my-employees employees
+```
+
+```shell
+docker run -d -e MARIADB_DATABASE=employees -e MARIADB_USER=employees -e MARIADB_PASSWORD=employees  -e MARIADB_ALLOW_EMPTY_ROOT_PASSWORD=yes -p 3306:3306 --name employees-mariadb mariadb
+
+set SPRING_DATASOURCE_URL=jdbc:mariadb://localhost/employees
+set SPRING_DATASOURCE_USERNAME=employees
+set SPRING_DATASOURCE_USERNAME=employees
+```
+
+```shell
+docker build -t employees -f Dockerfile.layered .
 ```
