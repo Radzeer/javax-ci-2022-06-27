@@ -28,6 +28,9 @@ build-job:
     - echo $SONAR_TOKEN
     - echo $CI_PIPELINE_ID
     - ./mvnw package
+  artifact:
+    paths:
+      - target/*.jar
 
 integ-test-job:
   stage: integration-test
