@@ -24,6 +24,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <mapstruct.version>1.3.1.Final</mapstruct.version>
 		<java.version>17</java.version>
+		<sonar.login>squ_2af21d090e97ca36479f5aab0cb486e42808afbc</sonar.login>
 	</properties>
 
     <dependencies>
@@ -215,6 +216,12 @@
 
         </plugins>
     </build>
+	<distributionManagement>
+		<snapshotRepository>
+			<id>nexus-snapshots</id>
+			<url>http://localhost:8091/repository/maven-snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
 
 
 </project>
