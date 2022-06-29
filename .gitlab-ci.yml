@@ -23,6 +23,8 @@ build-job:
   image: openjdk:17
   script:
     - echo 'Executing build'
+    - echo $SONAR_TOKEN
+    - echo $CI_PIPELINE_ID
     - ./mvnw package
 
 integ-test-job:
