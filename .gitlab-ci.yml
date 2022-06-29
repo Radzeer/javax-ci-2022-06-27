@@ -28,7 +28,7 @@ build-job:
     - echo $SONAR_TOKEN
     - echo $CI_PIPELINE_ID
     - ./mvnw package
-  artifact:
+  artifacts:
     paths:
       - target/*.jar
 
